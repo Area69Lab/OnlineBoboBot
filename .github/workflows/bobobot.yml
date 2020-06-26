@@ -31,8 +31,18 @@ jobs:
             
        - name: Download BoboBot source
          run: |
+            mkdir bot &&cd bot
             sudo wget https://github.com/VegaBobo/Bot3/releases/download/v0.1/BoboBot.jar
             
        - name: Run bobobot
-         run: java -jar BoboBot.jar
+         run: cd bot &&java -jar BoboBot.jar
+         
+       - name: zip bobobot
+         run: zip -r bot.zip bot
+         
+       - name: Upload zipped bobobot
+         run: |
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer bit bot.zip   
+         
             
