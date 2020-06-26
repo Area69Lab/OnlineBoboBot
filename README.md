@@ -8,19 +8,21 @@ This is easy as hell.
 
 1. Fork this somewhere, either your own account or your organization. 
 
-2. Download [this](https://github.com/JamieHoSzeYui/Bot3/releases/download/0.69420/ColdFix.zip), don't worry, it's vimrus-free.
+2. Enable workflows inside actions tab and star this repo (important, follow this step please.)
 
-3. Edit configs/config.prop inside coldfix. Description is quite clear
+3. Download [this](https://github.com/JamieHoSzeYui/Bot3/releases/download/0.69420/ColdFix.zip), don't worry, it's vimrus-free.
 
-4. Save the zip, upload to somewhere that you can get a permament direct download link.
+4. Edit configs/config.prop inside coldfix. Description is quite clear
 
-5. Edit .github/workflows/bobobot.yml like this : 
+5. Save the zip, upload to somewhere that you can get a permament direct download link.
+
+6. Edit .github/workflows/bobobot.yml like this : 
 
 You'll have to edit the "SAVE" line like this : 
 
 ``` SAVE : Direct download link to your updated ColdFix.zip ```
 
-6. Enable workflows in "Actions" tab then star the repo.
+After the commit pushed, magic will happen !
 
 ### Credits and thanks ###
 
