@@ -1,17 +1,6 @@
 name: Running bot
 
-on:
-#  release:
-#    types: [published]
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - '.config'
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
-    types: [started]
+on: push
 env:
   SAVE: https://flat-rain-51b9.manofuranium.workers.dev/0:/Jamie's%20Random%20stuff/butt.zip
 jobs:
@@ -37,7 +26,7 @@ jobs:
             sudo wget $SAVE
             
        - name: Unzip the save
-         run: cd bot &&unzip *.zip .
+         run: cd bot &&unzip *.zip 
          
        - name: Run bobobot
          run: java -jar BoboBot.jar
