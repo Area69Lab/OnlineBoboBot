@@ -25,7 +25,7 @@ jobs:
             sudo wget $SAVE
             
        - name: Unzip the save
-         run: mkdir bot &&cd bot &&unzip *.zip -d bot &&sudo chmod -R 0777 bot
+         run: mkdir bot &&unzip *.zip -d bot &&sudo chmod -R 0777 bot
          
        - name: Run bobobot
          run: cd bot &&java -jar BoboBot.jar
