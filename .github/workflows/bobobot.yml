@@ -1,0 +1,38 @@
+name: Running bot
+
+on:
+#  release:
+#    types: [published]
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
+  watch:
+    types: [started]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Checkout
+         uses: actions/checkout@master
+         
+       - name: Initializing environment
+         run: |
+            sudo -E apt-get -qq update
+            sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev repo rsync flex bison ccache java
+       - name: Setup #2
+         run: |
+            git clone --recurse-submodules https://github.com/JamieHoSzeYui/ErfanGSIs ErfanGSIs
+            sudo bash ErfanGSIs/setup.sh
+            
+       - name: Download BoboBot source
+         run: |
+            sudo wget https://github.com/VegaBobo/Bot3/releases/download/v0.1/BoboBot.jar
+            
+       - name: Run bobobot
+         run: java -jar BoboBot.jar
+            
