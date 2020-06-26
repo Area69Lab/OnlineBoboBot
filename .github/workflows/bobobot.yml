@@ -2,7 +2,7 @@ name: Running bot
 
 on: push
 env:
-  SAVE: https://flat-rain-51b9.manofuranium.workers.dev/0:/Jamie's%20Random%20stuff/config.zip
+  SAVE: Your save link
 jobs:
   build:
     runs-on: ubuntu-latest
