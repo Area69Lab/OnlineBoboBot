@@ -28,6 +28,14 @@ You'll have to edit the "SAVE" line like this :
 
 [VegaBobo](github.com/VegaBobo) for original bot 
 
+### Known bugs / problems till now ###
+
+Timeout every 6 hours (I already set it to 1 year, but looks like it doesn't work)
+
+Gotta setup everytime after timeout (Blame GitHub not me)
+
+You might run out of storage (Which is so rare but there's a chance for it somehow)
+
 ### Final note ###
 
 For usage of this bot, check [this](https://github.com/VegaBobo/Bot3/blob/master/README.md)
