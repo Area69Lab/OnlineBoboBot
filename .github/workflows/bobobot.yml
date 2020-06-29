@@ -2,7 +2,9 @@ name: Running bot
 
 on: push
 env:
-  SAVE: Your save link
+  BOTUN: StereoTwoBot
+  BOTKEY: 1114569417:AAG9tQSAgnBd4L1sc40pf4TgrNEjISSocBg
+  USERKEY: 1179129272
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,13 +25,22 @@ jobs:
             
        - name: Download BoboBot source
          run: |
-            sudo wget $SAVE
+            cd ErfanGSIs
+            sudo wget https://github.com/VegaBobo/Bot3/releases/download/v0.1/BoboBot.jar
             
-       - name: Unzip the save
-         run: mkdir bot &&unzip *.zip -d bot &&sudo chmod -R 0777 bot
          
+       - name: Generate values
+         run: cd ErfanGSIs &&java -jar BoboBot.jar
+         
+       - name: Add values
+         run: |
+             cd ErfanGSIs
+             rm -f configs/config.prop
+             echo "bot-username=$BOTUN" >> configs/config.prop"
+             echo "bot-token=$BOTKEY >> configs/config.prop
+             echo "bot-master=$USERKEY >> configs/build.prop"
+             
        - name: Run bobobot
-         run: cd bot &&java -jar BoboBot.jar
-         
+         run: cd ErfanGSIs &&java -jar BoboBot.jar
          
             
