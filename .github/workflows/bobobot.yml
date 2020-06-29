@@ -25,16 +25,14 @@ jobs:
             
        - name: Download BoboBot source
          run: |
-            cd ErfanGSIs
             sudo wget https://github.com/VegaBobo/Bot3/releases/download/v0.1/BoboBot.jar
             
          
        - name: Generate values
-         run: cd ErfanGSIs &&java -jar BoboBot.jar
+         run: java -jar BoboBot.jar
          
        - name: Add values
          run: |
-             cd ErfanGSIs
              rm -rf configs/config.prop
              cd configs
              touch config.prop
@@ -45,6 +43,6 @@ jobs:
              echo "bot-master=$USERKEY" >> "config.prop"
              
        - name: Run bobobot
-         run: cd ErfanGSIs &&java -jar BoboBot.jar
+         run: java -jar BoboBot.jar
          
             
