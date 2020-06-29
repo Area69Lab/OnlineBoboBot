@@ -35,9 +35,9 @@ jobs:
        - name: Add values
          run: |
              cd ErfanGSIs
-             sed -i "bot-username=$BOTUN" configs/config.prop
-             sed -i "bot-token=$BOTKEY" configs/config.prop
-             sed -i "bot-master=$USERKEY" configs/config.prop
+             sed 's/bot-username=put your bot user name, without @/bot-username=$BOTUN/' configs/config.prop
+             sed 's/bot-token=put your telegram bot token here/bot-token=$BOTKEY/' configs/config.prop
+             sed 's/bot-master=put your telegram user id here/bot-master=$USERKEY/' configs/config.prop
              
        - name: Run bobobot
          run: cd ErfanGSIs &&java -jar BoboBot.jar
