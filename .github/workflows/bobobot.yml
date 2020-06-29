@@ -35,10 +35,9 @@ jobs:
        - name: Add values
          run: |
              cd ErfanGSIs
-             rm -f configs/config.prop
-             echo "bot-username=$BOTUN" >> configs/config.prop"
-             echo "bot-token=$BOTKEY >> configs/config.prop
-             echo "bot-master=$USERKEY >> configs/build.prop"
+             sed -i "bot-username=$BOTUN" configs/config.prop
+             sed -i "bot-token=$BOTKEY" configs/config.prop
+             sed -i "bot-master=$USERKEY" configs/config.prop
              
        - name: Run bobobot
          run: cd ErfanGSIs &&java -jar BoboBot.jar
