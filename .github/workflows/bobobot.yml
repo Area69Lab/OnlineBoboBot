@@ -2,8 +2,8 @@ name: Running bot
 
 on: push
 env:
-  BOTUN: StereoTwoBot
-  BOTKEY: 1114569417:AAG9tQSAgnBd4L1sc40pf4TgrNEjISSocBg
+  BOTUN: QuintusDogBot
+  BOTKEY: 1316445413:AAHVfkC8m4Sp7BCRKu9S4W-7SS0f0noYHwE
   USERKEY: 1179129272
 jobs:
   build:
