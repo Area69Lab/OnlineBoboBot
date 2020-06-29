@@ -18,9 +18,11 @@ This is easy as hell.
 
 6. Edit .github/workflows/bobobot.yml like this : 
 
-You'll have to edit the "SAVE" line like this : 
+``` BOTUN : Username to your bot, grab a new bot from BotFather ```
 
-``` SAVE : Direct download link to your updated ColdFix.zip ```
+``` BOTKEY : Key of your bot, grab it from BotFather  ```
+
+``` USERKEY : Your UserID, grab it with rose using /id command  ```
 
 After the commit pushed, magic will happen !
 
