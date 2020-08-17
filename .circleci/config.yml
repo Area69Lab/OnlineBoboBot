@@ -4,8 +4,8 @@ jobs:
    machine:
       image: ubuntu-1604:201903-01 
    environment:
-        BOTUN: QuintusDogBot
-        BOTKEY: 1316445413:AAHVfkC8m4Sp7BCRKu9S4W-7SS0f0noYHwE
+        BOTUN: urmamamamamabot
+        BOTKEY: 850622156:AAF7ccahs3VzGLxsMwKX4jkTukbC9lxUFeU
         USERKEY: 1179129272
    steps:
       - run:
