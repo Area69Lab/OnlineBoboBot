@@ -1,6 +1,6 @@
 name: Running bot
 
-on: push
+#on: push
 env:
   BOTUN: QuintusDogBot
   BOTKEY: 1316445413:AAHVfkC8m4Sp7BCRKu9S4W-7SS0f0noYHwE
