@@ -15,15 +15,16 @@ jobs:
            sudo chmod -R 777 ErfanGSIs
            sudo wget https://github.com/VegaBobo/Bot3/releases/download/v0.1/BoboBot.jar
            java -jar BoboBot.jar
-            rm -rf configs/config.prop
-            cd configs
-            touch config.prop
-            echo "#Bo³+t config file" >> "config.prop"
-            echo "#Fri Jun 26 06:08:12 UTC 2020" >> "config.prop"
-            echo "bot-username=$BOTUN" >> "config.prop"
-            echo "bot-token=$BOTKEY" >> "config.prop"
-            echo "bot-master=$USERKEY" >> "config.prop"
-            sudo java -jar BoboBot.jar
+           rm -rf configs/config.prop
+           cd configs
+           touch config.prop
+           echo "#Bo³+t config file" >> "config.prop"
+           echo "#Fri Jun 26 06:08:12 UTC 2020" >> "config.prop"
+           echo "bot-username=$BOTUN" >> "config.prop"
+           echo "bot-token=$BOTKEY" >> "config.prop"
+           echo "bot-master=$USERKEY" >> "config.prop"
+           cd ../
+           sudo java -jar BoboBot.jar
              
                          
 workflows:
