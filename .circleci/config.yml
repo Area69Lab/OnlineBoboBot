@@ -4,19 +4,27 @@ jobs:
    machine:
       image: ubuntu-1604:201903-01 
    environment:
-      GIT_EMAIL: soniataran79@gmail.com
-      GIT_NAME: aman25502
-      ROM_URL: https://firmware.meizu.com/Firmware/Flyme/16xs/8.20.6.30/cn_beta/20200629214232/9e9e118e/update.zip
-      ROM_NAME: Flyme
-      ZIP_NAME: Flyme-16xs-8.20.6.30-CN
-      TZ: Asia/Kolkata
-      MIR: wet      
+        BOTUN: QuintusDogBot
+        BOTKEY: 1316445413:AAHVfkC8m4Sp7BCRKu9S4W-7SS0f0noYHwE
+        USERKEY: 1179129272
    steps:
       - run:
           command: |
-           sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y install git openjdk-8-jdk wget p7zip-full p7zip-rar python python3 rsync sshpass           
+           sudo apt-get -y update && sudo apt-get -y install git openjdk-8-jdk wget p7zip-full p7zip-rar python python3 rsync sshpass           
            git clone --recurse-submodules https://github.com/JamieHoSzeYui/ErfanGSIs
            sudo chmod -R 777 ErfanGSIs
+           sudo wget https://github.com/VegaBobo/Bot3/releases/download/v0.1/BoboBot.jar
+           java -jar BoboBot.jar
+            rm -rf configs/config.prop
+            cd configs
+            touch config.prop
+            echo "#Bo³+t config file" >> "config.prop"
+            echo "#Fri Jun 26 06:08:12 UTC 2020" >> "config.prop"
+            echo "bot-username=$BOTUN" >> "config.prop"
+            echo "bot-token=$BOTKEY" >> "config.prop"
+            echo "bot-master=$USERKEY" >> "config.prop"
+            sudo java -jar BoboBot.jar
+             
                          
 workflows:
   version: 2.1
