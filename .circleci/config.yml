@@ -8,7 +8,7 @@ jobs:
    BOTKEY: 1316445413:AAHVfkC8m4Sp7BCRKu9S4W-7SS0f0noYHwE
    USERKEY: 1179129272
 
-    steps:         
+steps:         
        - name: Initializing environment
          run: |
             sudo -E apt-get -qq update
