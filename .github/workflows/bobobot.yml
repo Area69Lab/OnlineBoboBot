@@ -47,9 +47,9 @@ jobs:
              touch config.prop
              echo "#Bo³+t config file" >> "config.prop"
              echo "#Fri Jun 26 06:08:12 UTC 2020" >> "config.prop"
-             echo "bot-username=$BOTUN" >> "config.prop"
-             echo "bot-token=$BOTKEY" >> "config.prop"
-             echo "bot-master=$USERKEY" >> "config.prop"
+             echo "bot-username=$Vegalodon_bot" >> "config.prop"
+             echo "bot-token=$1937221484:AAH732xq7A3-wk5d7wFLTv2BujREzO_YDFc" >> "config.prop"
+             echo "bot-master=$1216694029" >> "config.prop"
              
        - name: Run bobobot
          run: sudo java -jar BoboBot.jar
